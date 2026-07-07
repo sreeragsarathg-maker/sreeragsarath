@@ -1,3 +1,8 @@
+
+
+let nums=[2,7,11,15];
+let target=[9];
+
 function twoSum(nums, target) {
     let map = new Map();
 
@@ -11,3 +16,5 @@ function twoSum(nums, target) {
         map.set(nums[i], i);
     }
 }
+
+console.log(twoSum(nums,target));
