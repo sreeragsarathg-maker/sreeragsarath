@@ -1,16 +1,21 @@
-function isPalindrome(x) {
-    if (x < 0) {
-        return false;
-    }
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    let right=""+x
+    let left=""
+ 
+ for(let i=right.length-1;i>=0;i--){
+     left+=right[i]
+ }
+    console.log(right)
+    console.log(left)
+ if(right===left){
+    return true
+ }else{
+    return false
+ }
 
-    let original = x;
-    let reversed = 0;
 
-    while (x > 0) {
-        let digit = x % 10;
-        reversed = reversed * 10 + digit;
-        x = Math.floor(x / 10);
-    }
-
-    return original === reversed;
-}
+};
